@@ -1,0 +1,21 @@
+:root {
+	--color-gray: #777;
+	--color-light-green: rgba(126, 213, 111, 0.6);
+	--color-dark-green: rgba(40, 180, 131, 0.6);
+}
+
+body {
+	color: var(--color-gray);
+	padding: 30px;
+}
+
+.header {
+	height: 95vh;
+	background-image: linear-gradient(
+		to right bottom, 
+		var(--color-light-green), 
+		var(--color-dark-green)), 
+	url(../img/hero.jpg);
+	background-size: cover;
+	background-position: top;
+}
