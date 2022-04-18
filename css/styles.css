@@ -9,12 +9,12 @@
 @keyframes moveInLeft {
 	0% {
 		opacity: 0;
-		transform: translateX(-100px);
+		transform: translateX(-10rem);
 	}
 
 
 	80% {
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 
 	100% {
@@ -26,11 +26,11 @@
 @keyframes moveInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(100px);
+		transform: translateX(10rem);
 	}
 
 	80% {
-		transform: translateX(-10px);
+		transform: translateX(-1rem);
 	}
 
 	100% {
@@ -51,9 +51,23 @@
 	}
 }
 
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
 body {
+	font-family: "Lato", sans-serif;
 	color: var(--color-gray);
-	padding: 30px;
+	padding: 3rem;
+	box-sizing: border-box;
 }
 
 .header {
@@ -72,12 +86,12 @@ body {
 
 .logo-box {
 	position: absolute;
-	left: 40px;
-	top: 40px;
+	left: 4rem;
+	top: 4rem;
 }
 
 .logo-box .logo {
-	height: 35px;
+	height: 3.5rem;
 }
 
 .heading-primary {
@@ -96,9 +110,9 @@ body {
 
 .heading-primary-main {
 	display: block;
-	font-size: 60px;
+	font-size: 6rem;
 	font-weight: 400;
-	letter-spacing: 35px;
+	letter-spacing: 3.5rem;
 	animation: moveInLeft;
 	animation-duration: 1s;
 	animation-timing-function: ease-out;
@@ -106,28 +120,29 @@ body {
 
 .heading-primary-sub {
 	display: block;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 700;
-	letter-spacing: 17.4px;
+	letter-spacing: 1.7rem;
 	animation: moveInRight 1s ease-out;
 }
 
 .btn:link, .btn:visited {
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 15px 40px;
-	border-radius: 100px;
+	padding: 1.5rem 4rem;
+	border-radius: 10rem;
 	position: relative;
+	font-size: 1.6rem;
 }
 
 .btn:hover {
-	transform: translateY(-3px);
-	box-shadow: 0px 10px 20px var(--shadow-black);
+	transform: translateY(-.3rem);
+	box-shadow: 0rem 1rem 2rem var(--shadow-black);
 }
 
 .btn:active {
-	transform: translateY(-1px);
-	box-shadow: 0px 5px 10px var(--shadow-black);
+	transform: translateY(-.1rem);
+	box-shadow: 0rem .5rem 1rem var(--shadow-black);
 }
 
 .btn::after {
@@ -135,7 +150,7 @@ body {
 	display: inline-block;
 	height: 100%;
 	width: 100%;
-	border-radius: 100px;
+	border-radius: 10rem;
 	position: absolute;
 	top: 0;
 	left: 0;
