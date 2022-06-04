@@ -79,15 +79,23 @@ body {
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
 
-.header__logo-box {
-	position: absolute;
-	left: 4rem;
-	top: 4rem;
+	&__logo-box {
+		position: absolute;
+		left: 4rem;
+		top: 4rem;
 
-	& .logo {
-		height: 3.5rem;
+		& .logo {
+			height: 3.5rem;
+		}
+	}
+
+	&__text-box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-40%, -50%);
+		text-align: center;
 	}
 }
 
@@ -95,32 +103,24 @@ body {
 	color: $color-white;
 	text-transform: uppercase;
 	margin-bottom: 60px;
-}
 
-.header__text-box {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-40%, -50%);
-	text-align: center;
-}
+	&--main {
+		display: block;
+		font-size: 6rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+		animation: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+	}
 
-.heading-primary--main {
-	display: block;
-	font-size: 6rem;
-	font-weight: 400;
-	letter-spacing: 3.5rem;
-	animation: moveInLeft;
-	animation-duration: 1s;
-	animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-	display: block;
-	font-size: 2rem;
-	font-weight: 700;
-	letter-spacing: 1.7rem;
-	animation: moveInRight 1s ease-out;
+	&--sub {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.7rem;
+		animation: moveInRight 1s ease-out;
+	}
 }
 
 .btn {
@@ -161,19 +161,19 @@ body {
 		z-index: -1;
 		transition: all 0.4s;
 	}
-}
 
-.btn--white {
-	display: inline-block;
-	background-color: $color-white;
-	color: $color-gray;
-
-	&::after {
+	&--white {
+		display: inline-block;
 		background-color: $color-white;
-	}
-}
+		color: $color-gray;
 
-.btn-animated {
-	animation: moveInRBottom 0.5s ease-out 0.75s;
-	animation-fill-mode: backwards;
+		&::after {
+			background-color: $color-white;
+		}
+	}
+
+	&-animated {
+		animation: moveInRBottom 0.5s ease-out 0.75s;
+		animation-fill-mode: backwards;
+	}
 }
