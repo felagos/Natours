@@ -2,7 +2,9 @@
   "name": "natours",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/styles.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/felagos/Natours.git"
