@@ -1,0 +1,20 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felagos/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felagos/Natours/issues"
+  },
+  "homepage": "https://github.com/felagos/Natours#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.52.2"
+  }
+}
