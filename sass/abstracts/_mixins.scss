@@ -6,3 +6,14 @@
 	position: relative;
 	font-size: 1.6rem;
 }
+
+@mixin margin {
+	// Generate the classes by iterating through the array
+	//  $i becomes the index, which we will interpolate for
+	//  the class name and the index for each function call
+	@for $i from 1 to 10 {
+	  .u-mb-#{$i} {
+		margin-bottom: #{$i}rem;
+	  }
+	}
+  }
