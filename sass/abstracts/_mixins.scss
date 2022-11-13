@@ -8,54 +8,67 @@
 }
 
 @mixin margin {
-	// Generate the classes by iterating through the array
-	//  $i becomes the index, which we will interpolate for
-	//  the class name and the index for each function call
 	@for $i from 1 to 10 {
-	  .u-mb-#{$i} {
-		margin-bottom: #{$i}rem;
-	  }
+		.u-mb-#{$i} {
+			margin-bottom: #{$i}rem;
+		}
 	}
-  }
+}
 
-  @mixin clearfix {
+@mixin clearfix {
 	&::after {
-	  content: "";
-	  display: table;
-	  clear: both;
+		content: "";
+		display: table;
+		clear: both;
 	}
-  }
-  
-  
-  @mixin absCenter {
+}
+
+
+@mixin absCenter {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  }
-   
-  
-  @mixin respond($breakpoint) {
-  
-  
-	@if $breakpoint == phone {
-	  @media (max-width: 37.5em) { @content};  // 600px
-	} 
-  
-  
-	@if $breakpoint == tab-port {
-	  @media (max-width: 56.25em) { @content};   // 900px
-	} 
-  
-  
-	@if $breakpoint == tab-land {
-	  @media (max-width: 75em) { @content};  // 1200px
-	} 
-  
-  
-	@if $breakpoint == big-desktop {
-	  @media (min-width: 112.5em) { @content}; // 1800px
-	} 
-  
-	
-  }
+}
+
+
+@mixin respond($breakpoint) {
+
+
+	@if $breakpoint ==phone {
+		@media (max-width: 37.5em) {
+			@content
+		}
+
+		; // 600px
+	}
+
+
+	@if $breakpoint ==tab-port {
+		@media (max-width: 56.25em) {
+			@content
+		}
+
+		; // 900px
+	}
+
+
+	@if $breakpoint ==tab-land {
+		@media (max-width: 75em) {
+			@content
+		}
+
+		; // 1200px
+	}
+
+
+	@if $breakpoint ==big-desktop {
+		@media (min-width: 112.5em) {
+			@content
+		}
+
+		; // 1800px
+	}
+
+
+}
