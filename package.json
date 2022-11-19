@@ -5,7 +5,8 @@
 	"scripts": {
 		"watch:sass": "sass sass/main.scss css/styles.css -w",
 		"compile:sass": "sass sass/main.scss css/styles.css",
-		"compile:sass:prod": "sass sass/main.scss css/styles.css --style compressed"
+		"compile:sass:prod": "sass sass/main.scss css/styles.css --style compressed",
+		"dev": "concurrently --kill-others \"pnpm watch:sass\" \"live-server .\""
 	},
 	"repository": {
 		"type": "git",
@@ -17,8 +18,9 @@
 		"url": "https://github.com/felagos/Natours/issues"
 	},
 	"homepage": "https://github.com/felagos/Natours#readme",
-	"dependencies": {},
 	"devDependencies": {
+		"concurrently": "^7.5.0",
+		"live-server": "^1.2.2",
 		"sass": "^1.52.2"
 	}
 }
