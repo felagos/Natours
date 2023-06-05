@@ -1,7 +1,6 @@
 body {
 	font-family: "Lato", sans-serif;
 	color: $color-gray;
-	padding: 3rem;
 }
 
 .heading-primary {
@@ -17,6 +16,12 @@ body {
 		animation: moveInLeft;
 		animation-duration: 1s;
 		animation-timing-function: ease-out;
+
+		@include respond(phone) {
+			font-size: 5rem;
+			letter-spacing: 1rem;
+		}
+
 	}
 
 	&--sub {
@@ -25,6 +30,11 @@ body {
 		font-weight: 700;
 		letter-spacing: 1.7rem;
 		animation: moveInRight 1s ease-out;
+
+		@include respond(phone) {
+			letter-spacing: .5rem;
+		}
+
 	}
 }
 
